@@ -1,0 +1,57 @@
+---
+title:"IRIS Dataset"
+format: html
+editor: visual
+echo: false
+---
+
+## *Introduction*
+
+The Iris dataset is a classic dataset in R and also statistics and machine learning. It contains 5 variables such as measurements of sepal length, sepal width, petal length, and petal width for 150 iris flowers, along with the species of each flower. The dataset is often used for data visualization and classification exercises.
+
+### Summary of the datset
+
+*Table shows the first 6 rows of the dataset*
+
+```{r}
+data("iris")
+```
+
+```{r}
+head(iris)
+```
+
+*Here is the descriptive statistics of IRIS Dataset*
+
+```{r}
+summary(iris)
+```
+
+## *PLOT: Scatter plot*
+
+This scatter plot shows the relationship between petal length and petal width for the different species of iris flowers. The plot reveals that different species tend to cluster in different regions of the plot, indicating that petal measurements can be useful for distinguishing between species.Here i have used ggplot 2 library to get the scatter plot
+
+```{r}
+library(ggplot2)
+
+# Create the scatter plot
+ggplot(iris, aes(x = Petal.Length, y = Petal.Width, color = Species)) +
+  geom_point(alpha = 0.7) +
+  labs(title = "Petal Length vs Petal Width",
+       x = "Petal Length (cm)",
+       y = "Petal Width (cm)",
+       color = "Species") +
+  theme_minimal()
+```
+
+Figure: scatter plot of petal length vs petal width for different species
+
+### Interpretation:
+
+-   There is a clear positive correlation between petal length and petal width. Generally, flowers with longer petals also tend to have wider petals.
+
+-   The plot shows distinct clusters for each species based on their petal measurements. This indicates that petal length and width can be effective features for distinguishing between iris species.
+
+-   Iris setosa (red points) typically has smaller and narrow wider petals compared to versicolor (green points) and virginica (blue points), which have larger and more elongated petals.
+
+This visualization helps in understanding the differences and similarities in petal characteristics among the different species of iris flowers.
