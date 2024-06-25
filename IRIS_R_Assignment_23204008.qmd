@@ -38,7 +38,7 @@ library(ggplot2)
 
 # Create the scatter plot
 ggplot(iris, aes(x = Petal.Length, y = Petal.Width, color = Species)) +
-  geom_point(alpha = 0.7) +
+  geom_point(alpha = 0.6) +
   labs(title = "Petal Length vs Petal Width",
        x = "Petal Length (cm)",
        y = "Petal Width (cm)",
