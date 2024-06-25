@@ -1,0 +1,45 @@
+---
+title: "Git_Quiz"
+author: "Trivedi_Venkatesh"
+format: html
+editor: visual
+---
+
+```{r}
+```
+
+```{r}
+
+```
+
+```{r}
+#install.packages('usethis')
+library(usethis)
+library(gitcreds)
+```
+
+```{r}
+usethis::git_sitrep()
+```
+
+```{r}
+usethis::use_git_config(
+user.name = "Trivedivenkatesh",
+user.email = "trivedi.venkatesh@ucdconnect.ie")
+```
+
+```{r}
+
+usethis::create_github_token()
+```
+
+```{r}
+gitcreds::gitcreds_set()
+```
+
+```{1 + 1}
+```
+
+```{r}
+
+```
