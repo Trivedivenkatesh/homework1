@@ -16,6 +16,7 @@ The Iris dataset is a classic dataset in R and also statistics and machine learn
 
 ```{r}
 data("iris")
+dim(iris)
 ```
 
 ```{r}
